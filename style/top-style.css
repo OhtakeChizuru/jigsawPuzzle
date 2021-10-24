@@ -1,0 +1,25 @@
+h2{
+    background: cadetblue;
+    color: white;
+    width: 700px;
+    height: 50px;
+    text-align:center;
+    margin:auto;
+}
+p{
+    background: cadetblue;
+    color: white;
+    width: 700px;
+    height: 50px;
+    text-align:center;
+    margin:auto;
+}
+
+.featuredSelect a{
+    top: 0;
+    text-align:center;
+    margin: auto;
+    width:400px;
+    height:300px;
+
+}
