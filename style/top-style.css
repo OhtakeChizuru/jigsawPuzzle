@@ -15,11 +15,7 @@ p{
     margin:auto;
 }
 
-.featuredSelect a{
-    top: 0;
-    text-align:center;
-    margin: auto;
-    width:400px;
-    height:300px;
-
+.featuredSelect{
+    text-align: center;
+    margin-top: 2%;
 }
