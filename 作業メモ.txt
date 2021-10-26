@@ -23,3 +23,9 @@
 
 ●トップページ参照
 画像の位置調整：https://webkcampus.com/201501/949/
+
+●ジグソーパズルの作り方参考
+https://www.codeproject.com/Articles/395453/Html5-Jigsaw-Puzzle
+
+-paper.js
+http://paperjs.org/download/
