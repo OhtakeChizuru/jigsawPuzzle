@@ -29,3 +29,6 @@ https://www.codeproject.com/Articles/395453/Html5-Jigsaw-Puzzle
 
 -paper.js
 http://paperjs.org/download/
+
+●スライドパズルのスクリプト
+https://step-learn.com/article/javascript/156-slide-puzzle.html
