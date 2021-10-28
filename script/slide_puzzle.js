@@ -1,11 +1,14 @@
 tiles = [];
 
+//onloadプロパティは紐付けたイベントが終わったら実行される。windowオブジェクトとは、ブラウザが竿所から用意してくれているオブジェクトで。HTML文書全体を指すオブジェクトとして仕様している。
 window.onload = function() {
     
     var arr = ['', '1', '2', '3', '4', '5', '6', '7', '8'];
     // シャッフル
     shuffle(arr);
 
+
+    //ドキュメントオブジェクトとは、Chromeなどのブラウザ上で表示されたドキュメントを操作することができる。
     var panel = document.getElementById('panel');
     
     // div要素作成
