@@ -7,6 +7,9 @@
 2. 画像の保存場所やスクレイピングはAWSを使う
 3. 本当はデザインもやりたいが無理なので、簡単にbootstrapなどを使ってしまう。
 4. jqueryも使ってみたい。
+5. JavaScriptはモジュールを分けた形でやってみたい。
+6. テストもやってみたい。
+7. 今はliveweaverでSafariでしか見れないが、他のブラウザでもみてみたい。
 
 ●component
 1. トップページ
@@ -27,8 +30,14 @@
 ●ジグソーパズルの作り方参考
 https://www.codeproject.com/Articles/395453/Html5-Jigsaw-Puzzle
 
--paper.js
+●paper.js
 http://paperjs.org/download/
 
 ●スライドパズルのスクリプト
 https://step-learn.com/article/javascript/156-slide-puzzle.html
+
+●モジュールの扱い方について参考
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Modules
+
+ーーー詰まって解決できなかったこと。
+1. moduleに分けてimportやexportをしたかったが、なぜかhtmlに認識されなかった。なぜ？
