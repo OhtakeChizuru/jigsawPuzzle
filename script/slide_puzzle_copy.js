@@ -1,5 +1,5 @@
 // import { shuffle } from "./modules/shuffle.js";
-
+var tiles = [];
 //HTML文書の読み込みが終わったら、パズルを生成する。（＝＞これが動的というもの）
 window.onload = function (){
     //パズルのタイルに表示する数字の配列を作成し、最後シャッフルする。
@@ -25,9 +25,10 @@ window.onload = function (){
         //tileParts(div)にテキスト情報を付与する。
         tileParts.textContent = number[i];
         //tileParts(div)にクリックした時の動作を加える（関数は後で作成する）。
-        tileParts.onclick = '';
+        tileParts.onclick = click;
         //tileをpanel要素の子要素とする。
         panel.appendChild(tileParts);
+        tiles.push(tileParts);
 
     }
 
@@ -64,6 +65,37 @@ function shuffle(arr){
 }
 
 //clickした時の動作を定義する関数
+
+// タイルのtextContentを入れ替える
+function swapContent(i, k){
+    
+    var temp = tiles[i].textContent;
+    tiles[i].textContent = tiles[k].textContent;
+    tiles[k].textContent = temp;
+    
+}
+
+
+//クリックした時の動作が決まっている。空白の部分と入れ替える。
+function click(e) {
+    
+    //クリックしたタイルのインデックスを取得する。
+    var i = e.target.index;
+
+    if (i <= 5 && tiles[i + 3].textContent == '' ){
+        // 下と入れ替え
+        swapContent(i, i + 3);
+    }else if ( i >= 3 && tiles[i - 3].textContent == ''){
+        // 上と入れ替え
+        swapContent(i, i - 3);
+    }else if (i % 3 !== 2 && tiles[i + 1].textContent == ''){
+        // 右と入れ替え
+        swapContent(i, i + 1);
+    }else if (i % 3 !== 0 && tiles[i - 1].textContent == ''){
+        // 左と入れ替え
+        swapContent(i, i - 1);
+    }
+}
 
 //新しくシャッフルしてゲームをもう一度行う関数
 

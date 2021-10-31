@@ -41,5 +41,3 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Modules
 
 ーーー詰まって解決できなかったこと。
 1. moduleに分けてimportやexportをしたかったが、なぜかhtmlに認識されなかった。なぜ？
-
-ああああ
