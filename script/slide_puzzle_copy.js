@@ -1,36 +1,45 @@
 // import { shuffle } from "./modules/shuffle.js";
+const randomize = document.querySelector('.randomize');
 var tiles = [];
 //HTML文書の読み込みが終わったら、パズルを生成する。（＝＞これが動的というもの）
+
+
 window.onload = function (){
-    //パズルのタイルに表示する数字の配列を作成し、最後シャッフルする。
-    var number = ['',1,2,3,4,5,6,7,8];
+
+    //ボタンを押すと新しいゲーム
+    randomize.addEventListener('click', result);
     
-    shuffle(number);
+    
+    //パズルのタイルに表示する数字の配列を作成し、最後シャッフルする。
+    
 
-    console.log(number);
+    function result(){
 
+        var number = ['',1,2,3,4,5,6,7,8];
+    
+        shuffle(number);
 
+        //ブラウザ上のid=panelを持つ要素を返す
+        var panel = document.getElementById("panel");
 
-    //ブラウザ上のid=panelを持つ要素を返す
-    var panel = document.getElementById("panel");
+        //div要素作成(9枚のパネル)
+        for (i=0; i<9; i++){
+            //div要素を持つエレメントを作成する。
+            var tileParts = document.createElement("div");
+            //class名を指定する。
+            tileParts.className="tile";
+            //tileParts(div)が持つindexを定義する（でも、最後にtileにpushするのでいらない気がする、、、最後にこの行を抜いて試してみる）
+            tileParts.index = i;
+            //tileParts(div)にテキスト情報を付与する。
+            tileParts.textContent = number[i];
+            //tileParts(div)にクリックした時の動作を加える（関数は後で作成する）。
+            tileParts.onclick = click;
+            //tileをpanel要素の子要素とする。
+            panel.appendChild(tileParts);
+            tiles.push(tileParts);
 
-    //div要素作成(9枚のパネル)
-    for (i=0; i<9; i++){
-        //div要素を持つエレメントを作成する。
-        var tileParts = document.createElement("div");
-        //class名を指定する。
-        tileParts.className="tile";
-        //tileParts(div)が持つindexを定義する（でも、最後にtileにpushするのでいらない気がする、、、最後にこの行を抜いて試してみる）
-        tileParts.index = i;
-        //tileParts(div)にテキスト情報を付与する。
-        tileParts.textContent = number[i];
-        //tileParts(div)にクリックした時の動作を加える（関数は後で作成する）。
-        tileParts.onclick = click;
-        //tileをpanel要素の子要素とする。
-        panel.appendChild(tileParts);
-        tiles.push(tileParts);
-
-    }
+        }
+}
 
 }
 
