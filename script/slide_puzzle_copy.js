@@ -12,7 +12,9 @@ window.onload = function (){
     //パズルにrestartボタンをつける。
 	const restartButton = document.createElement("button");
 	restartButton.innerHTML = ("restart");
-    showButton = panel.appendChild(restartButton);
+    const showButton = panel.appendChild(restartButton);
+    showButton.sho
+    
 
 }
 

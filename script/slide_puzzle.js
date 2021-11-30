@@ -1,15 +1,12 @@
-tiles = [];
+document.addEventListener('DOMContentLoaded', () =>{
+    const panel = document.getElementById('panel')
+    let tiles = []
+    let arr = ['', '1', '2', '3', '4', '5', '6', '7', '8'];
 
-//onloadプロパティは紐付けたイベントが終わったら実行される。windowオブジェクトとは、ブラウザが竿所から用意してくれているオブジェクトで。HTML文書全体を指すオブジェクトとして仕様している。
-window.onload = function() {
     
-    var arr = ['', '1', '2', '3', '4', '5', '6', '7', '8'];
+    
     // シャッフル
     shuffle(arr);
-
-
-    //ドキュメントオブジェクトとは、Chromeなどのブラウザ上で表示されたドキュメントを操作することができる。
-    var panel = document.getElementById('panel');
     
     // div要素作成
     for (i = 0; i < 9; i++){
@@ -21,7 +18,9 @@ window.onload = function() {
         panel.appendChild(div);
         tiles.push(div);
     }
-} 
+
+//restart機能を作成する
+
 
 // シャッフル用関数
 function shuffle(arr) {
@@ -65,3 +64,8 @@ function click(e) {
         swapContent(i, i - 1);
     }
 }
+
+
+
+})
+
