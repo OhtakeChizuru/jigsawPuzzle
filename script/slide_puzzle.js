@@ -90,7 +90,7 @@ function click(e) {
         swapContent(i, i - 1);
     }
 }
-
+document.addEventListener('click', click)
 startBtn.addEventListener('click', startGame)
 
 })
