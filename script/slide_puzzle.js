@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', () =>{
-    const panel = document.getElementById('panel')
+    const panel = document.querySelector('.panel')
+    const startBtn = document.querySelector('.start')
     let tiles = []
-    let arr = ['', '1', '2', '3', '4', '5', '6', '7', '8'];
+    let arr = ['', '1', '2', '3', '4', '5', '6', '7', '8']
+    let TileIndexes=[0,1,2,3,4,5,6,7,8]
 
-    
-    
-    // シャッフル
-    shuffle(arr);
-    
-    // div要素作成
+    shuffle(arr)
+
+     // div要素作成
     for (i = 0; i < 9; i++){
-        var div = document.createElement('div');
+        
+        //div要素を.panelクラス直下に作成する。
+        let div = document.createElement('div')
         div.className = 'tile';
         div.index = i;
         div.textContent = arr[i];
@@ -19,7 +20,32 @@ document.addEventListener('DOMContentLoaded', () =>{
         tiles.push(div);
     }
 
-//restart機能を作成する
+    
+    
+
+//start機能を作成する
+function startGame(){
+    // arrをシャッフル
+    shuffle(arr);
+   
+     // squaresの.tile要素を消す。
+    const squares = document.querySelectorAll('.tile')
+    TileIndexes.forEach(index => squares[index].remove())
+
+     // div要素作成
+    for (i = 0; i < 9; i++){
+        
+        //div要素を.panelクラス直下に作成する。
+        let div = document.createElement('div')
+        div.className = 'tile';
+        div.index = i;
+        div.textContent = arr[i];
+        div.onclick = click;
+        panel.appendChild(div);
+        tiles.push(div);
+    }
+
+}
 
 
 // シャッフル用関数
@@ -65,7 +91,8 @@ function click(e) {
     }
 }
 
-
+startBtn.addEventListener('click', startGame)
 
 })
+
 
