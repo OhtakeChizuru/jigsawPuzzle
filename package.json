@@ -1,0 +1,25 @@
+{
+  "name": "jigsawpuzzle",
+  "version": "1.0.0",
+  "description": "jigsawpuzzle作成用",
+  "main": "動作確認.js",
+  "scripts": {
+    "test": "5+5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OhtakeChizuru/jigsawPuzzle.git"
+  },
+  "keywords": [
+    "jigsaw"
+  ],
+  "author": "OhtakeChizuru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OhtakeChizuru/jigsawPuzzle/issues"
+  },
+  "homepage": "https://github.com/OhtakeChizuru/jigsawPuzzle#readme",
+  "dependencies": {
+    "paper": "^0.12.15"
+  }
+}
