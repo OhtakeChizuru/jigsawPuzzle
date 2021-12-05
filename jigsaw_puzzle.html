@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JigsawPuzzle</title>
     <script type="text/javascript"　src="/Users/chizuruotake/Documents/GitHub/jigsawPuzzle/paperjs/dist/paper-full.js" ></script>
-    <script type="text/javascript">
-        var bob = new Raster('Bob');
-        bob.position = view.center;
+    <script type="text/paperscript" canvas="canvas">
+        var puzzle = new Raster('Puzzle');
+        puzzle.position = view.center;
     </script>
 </head>
 <body>
+    <canvas id="canvas" class="canvas" resize></canvas>
+    <img id="Puzzle" src="/puzzles/data/paintingDatas/banks_of_the_seine_vetheuil_1963.10.177.jpg"  style="display: none;>
 
     
 </body>
