@@ -1,5 +1,5 @@
 
-// ひとまずthe_japanese_footbridge_1992_9_1.jpgでジグソーパズルを作ってみる。
+// ひとまずthe_japanese_footbridge_1992_9_1.jpgでジグソーパズルを作ってみる。参照コード：https://www.codeproject.com/script/Articles/ViewDownloads.aspx?aid=395453
 
 const { xml } = require("cheerio/lib/static");
 const { Path, Point, Size, Group } = require("paper/dist/paper-core");
@@ -83,7 +83,8 @@ tile.opacity =1;
 tile.shape=shape;
 tile.imagePosition = new Point(x,y);
 
-// 
+//形をそれぞれのピースにランダムに割り当てる。
+
 
 
 
