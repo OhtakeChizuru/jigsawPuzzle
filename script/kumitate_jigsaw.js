@@ -10,7 +10,7 @@ let bango = -1;
 // これで安定して画像が表示できるようになる。
 function preload(){
     // 相対パスじゃないとだめ。
-    img = loadImage("puzzles/data/the_japanese_footbridge_1992.9.1.jpg");
+    img = loadImage("puzzles/data/paintingDatas/the_japanese_footbridge_1992.9.1.jpg");
 }
 
 function setup(){
