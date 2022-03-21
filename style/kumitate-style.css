@@ -1,0 +1,51 @@
+.featured_pictures_area{
+  text-align: center;
+
+}
+
+.main_picture{
+  width: 300px;
+  height: auto;
+  text-align: center;
+}
+
+.sub_pictures_area{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured_pictures_area ul {
+  list-style: none;
+}
+
+.sub_picture{
+  flex: 40%;
+  text-align: center;
+  padding: 20px 20px 0;
+  margin: 5px;
+}
+
+.sub_picture img{
+  width: 400px;
+  height: auto;
+}
+
+
+.jigsaw {
+  text-align: center;
+    
+}
+
+
+.Title{
+  font-family: 'Eagle Lake', cursive; 
+  font-size: 50px;
+  text-align: center;
+}
+
+
+#canvas {
+  text-align: center;
+  
+}
+
