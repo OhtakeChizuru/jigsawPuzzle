@@ -10,9 +10,7 @@ const startBtn = document.querySelector("#restart");
 // これで安定して画像が表示できるようになる。
 function preload() {
   // 相対パスじゃないとだめ。
-  img = loadImage(
-    "puzzles/data/paintingDatas/the_japanese_footbridge_1992.9.1.jpg"
-  );
+  img = loadImage("puzzles/data/paintingDatas/猫_絵画1.jpg");
 }
 
 function setup() {
