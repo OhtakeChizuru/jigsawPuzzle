@@ -4,7 +4,7 @@
 }
 
 .main_picture{
-  width: 300px;
+  width: 400px;
   height: auto;
   text-align: center;
 }
@@ -12,6 +12,7 @@
 .sub_pictures_area{
   display: flex;
   flex-wrap: wrap;
+  object-fit: contain;
 }
 
 .featured_pictures_area ul {
@@ -19,14 +20,12 @@
 }
 
 .sub_picture{
-  flex: 40%;
+  flex: 20%;
   text-align: center;
-  padding: 20px 20px 0;
-  margin: 5px;
 }
 
 .sub_picture img{
-  width: 400px;
+  width: 300px;
   height: auto;
 }
 
