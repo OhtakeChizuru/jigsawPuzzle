@@ -15,11 +15,11 @@ function preload() {
 
 function setup() {
   // 写真の大きさにCanvasの大きさも合わせないと絵が変になる。
-  let canvas = createCanvas(600, 400);
+  let canvas = createCanvas(600, 640);
   canvas.parent("canvas");
 
   // 画像の調整がうまくいかず、動画の大きさ以外対応できない。
-  for (i = 0; i <= 23; i++) {
+  for (i = 0; i <= 44; i++) {
     let _x = (i % 6) * 100;
     let _y = int(i / 6) * 100;
     cutList[i] = img.get(_x, _y, 100, 100);
@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
   background(5);
-  for (i = 0; i <= 23; i++) {
+  for (i = 0; i <= 44; i++) {
     let _x = (i % 6) * 100;
     let _y = int(i / 6) * 100;
 
@@ -55,7 +55,7 @@ function draw() {
 }
 
 function mousePressed() {
-  for (i = 0; i <= 23; i++) {
+  for (i = 0; i <= 44; i++) {
     let _x = (i % 6) * 100;
     let _y = int(i / 6) * 100;
     if (mouseX > _x && mouseX < _x + 100) {
@@ -86,4 +86,4 @@ function isClear() {
   return 1;
 }
 
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", setup);
