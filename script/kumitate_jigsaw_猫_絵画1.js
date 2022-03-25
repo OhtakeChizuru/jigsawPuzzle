@@ -14,6 +14,12 @@ function preload() {
 }
 
 function setup() {
+  ResetSkech();
+  let button = createButton("reset");
+  button.mousePressed(ResetSkech);
+}
+
+function ResetSkech() {
   // 写真の大きさにCanvasの大きさも合わせないと絵が変になる。
   let canvas = createCanvas(600, 640);
   canvas.parent("canvas");
@@ -30,6 +36,11 @@ function setup() {
     let to = int(random(0, 24));
     exchange(from, to);
   }
+}
+
+function restart() {
+  img.reset();
+  setup();
 }
 
 function draw() {
@@ -86,4 +97,4 @@ function isClear() {
   return 1;
 }
 
-startBtn.addEventListener("click", setup);
+startBtn.addEventListener("click", restart());
